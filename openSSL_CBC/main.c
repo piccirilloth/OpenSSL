@@ -30,12 +30,21 @@ int main() {
     printf("\n");
 
     EVP_CIPHER_CTX_init(ctx);
-    EVP_EncryptInit(ctx, EVP_aes_128_cbc(), key, iv);
+    if(EVP_EncryptInit(ctx, EVP_aes_128_cbc(), key, iv) != 1) {
+        printf("error in EVP_EncryptInit\n");
+        return -1;
+    }
 
-    EVP_CipherUpdate(ctx, obuf, &len, message, strlen(message));
+    if(EVP_CipherUpdate(ctx, obuf, &len, message, strlen(message)) != 1) {
+        printf("error in EVP_CipherUpdate\n");
+        return -1;
+    }
     tot += len;
 
-    EVP_CipherFinal(ctx, obuf+tot, &len);
+    if(EVP_CipherFinal(ctx, obuf+tot, &len) != 1) {
+        printf("error in EVP_CipherFinal\n");
+        return -1;
+    }
     tot += len;
     printf("the encrypted message is ");
     for(i=0; i<tot; i++) {
@@ -48,12 +57,21 @@ int main() {
     ctx = EVP_CIPHER_CTX_new();
     EVP_CIPHER_CTX_init(ctx);
 
-    EVP_DecryptInit(ctx, EVP_aes_128_cbc(), key, iv);
+    if(EVP_DecryptInit(ctx, EVP_aes_128_cbc(), key, iv) != 1) {
+        printf("error in EVP_DecryptInit\n");
+        return -1;
+    }
 
-    EVP_CipherUpdate(ctx, decrypted, &len, obuf, tot);
+    if(EVP_CipherUpdate(ctx, decrypted, &len, obuf, tot) != 1) {
+        printf("error in EVP_CipherUpdate\n");
+        return -1;
+    }
     dec_tot += len;
-    len = 0;
-    EVP_CipherFinal(ctx, decrypted+dec_tot, &len);
+
+    if(EVP_CipherFinal(ctx, decrypted+dec_tot, &len) != 1) {
+        printf("error in EVP_CipherFinal\n");
+        return -1;
+    }
     dec_tot += len;
     printf("the decrypted message is ");
     for(i=0; i<dec_tot; i++) {
