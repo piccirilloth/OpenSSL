@@ -39,12 +39,14 @@ int main() {
         printf("error in EVP_CipherUpdate\n");
         return -1;
     }
+    printf("%d\n", len);
     tot += len;
 
     if(EVP_CipherFinal(ctx, obuf+tot, &len) != 1) {
         printf("error in EVP_CipherFinal\n");
         return -1;
     }
+    printf("%d\n", len);
     tot += len;
     printf("the encrypted message is ");
     for(i=0; i<tot; i++) {
@@ -80,6 +82,38 @@ int main() {
     printf("\n");
 
     EVP_CIPHER_CTX_free(ctx);
+
+    /***************************************************************************/
+    printf("\nEncryption with split\n");
+    int split_index = 12;
+    char *long_message = "This is a long message"; // 22 characters
+
+    printf("the long message is ");
+    for(i=0; i< strlen(long_message); i++) {
+        printf("%2x", long_message[i]);
+    }
+    printf("\n");
+
+    ctx = EVP_CIPHER_CTX_new();
+    EVP_CIPHER_CTX_init(ctx);
+    EVP_EncryptInit(ctx, EVP_aes_128_cbc(), key, iv);
+
+    tot = 0;
+    EVP_CipherUpdate(ctx, obuf, &len, long_message, split_index);
+    printf("%d\n", len);
+    tot += len;
+    EVP_CipherUpdate(ctx, obuf+tot, &len, long_message+split_index, strlen(long_message)-split_index);
+    printf("%d\n", len);
+    tot += len;
+    EVP_CipherFinal(ctx, obuf+tot, &len);
+    printf("%d\n", len);
+    tot += len;
+
+    printf("the long message encrypted is ");
+    for(i=0; i<tot; i++) {
+        printf("%2x", obuf[i]);
+    }
+    printf("\n");
 
     return 0;
 }

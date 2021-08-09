@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/picci/OneDrive/Desktop/crypto_openSSL/openSSL_CBC/cmake-build-debug/CMakeFiles/openSSL_CBC.dir/embed.manifest"
