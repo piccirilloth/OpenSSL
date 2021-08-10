@@ -11,16 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b7518e5-44d8-4e60-a059-ad1e53117c28" name="Changes" comment="aes_cbc and checks split">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/openSSL_CBC.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/openSSL_CBC.dir/main.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/openSSL_CBC.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/openSSL_CBC.dir/vc140.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/openSSL_CBC.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-    </list>
+    <list default="true" id="2b7518e5-44d8-4e60-a059-ad1e53117c28" name="Changes" comment="aes_cbc and checks split hash" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +66,7 @@
       <workItem from="1628330708121" duration="2983000" />
       <workItem from="1628340174061" duration="387000" />
       <workItem from="1628503379289" duration="1840000" />
-      <workItem from="1628584582563" duration="1611000" />
+      <workItem from="1628584582563" duration="1649000" />
     </task>
     <task id="LOCAL-00001" summary="aes_cbc">
       <created>1628333253223</created>
@@ -98,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628505219782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="aes_cbc and checks split hash">
+      <created>1628587155730</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628587155730</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +119,7 @@
     <MESSAGE value="aes_cbc" />
     <MESSAGE value="aes_cbc and checks" />
     <MESSAGE value="aes_cbc and checks split" />
-    <option name="LAST_COMMIT_MESSAGE" value="aes_cbc and checks split" />
+    <MESSAGE value="aes_cbc and checks split hash" />
+    <option name="LAST_COMMIT_MESSAGE" value="aes_cbc and checks split hash" />
   </component>
 </project>
