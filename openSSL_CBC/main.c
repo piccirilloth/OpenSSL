@@ -115,5 +115,24 @@ int main() {
     }
     printf("\n");
 
+    /******************************************************************************/
+
+    // Compute digest
+    printf("\nThe message we want to compute the digest on is %s\n", message);
+    EVP_MD_CTX *md_ctx;
+    md_ctx = EVP_MD_CTX_new();
+    EVP_DigestInit(md_ctx, EVP_sha256());
+
+    unsigned char hash[BUF_SIZE];
+    int hash_len;
+
+    EVP_DigestUpdate(md_ctx, message, strlen(message));
+    EVP_DigestFinal(md_ctx, hash, &hash_len);
+
+    printf("the hash has length equal to %d bytes\n", hash_len);
+    for(i=0; i<hash_len; i++) {
+        printf("%2x", hash[i]);
+    }
+    printf("\n");
     return 0;
 }
