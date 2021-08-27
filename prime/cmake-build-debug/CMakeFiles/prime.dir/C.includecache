@@ -1,0 +1,166 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Program Files/OpenSSL-Win64/include/openssl/applink.c
+stdio.h
+-
+io.h
+-
+fcntl.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/bio.h
+openssl/e_os2.h
+-
+stdio.h
+-
+stdarg.h
+-
+openssl/crypto.h
+-
+openssl/bioerr.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/bioerr.h
+openssl/symhacks.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/bn.h
+openssl/e_os2.h
+-
+stdio.h
+-
+openssl/opensslconf.h
+-
+openssl/ossl_typ.h
+-
+openssl/crypto.h
+-
+openssl/bnerr.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/bnerr.h
+openssl/symhacks.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/crypto.h
+stdlib.h
+-
+time.h
+-
+openssl/e_os2.h
+-
+stdio.h
+-
+openssl/safestack.h
+-
+openssl/opensslv.h
+-
+openssl/ossl_typ.h
+-
+openssl/opensslconf.h
+-
+openssl/cryptoerr.h
+-
+openssl/ebcdic.h
+-
+openssl/symhacks.h
+-
+openssl/opensslv.h
+-
+pthread.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/cryptoerr.h
+openssl/symhacks.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/e_os2.h
+openssl/opensslconf.h
+-
+inttypes.h
+-
+stdint.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/ebcdic.h
+stdlib.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/err.h
+openssl/e_os2.h
+-
+stdio.h
+-
+stdlib.h
+-
+openssl/ossl_typ.h
+-
+openssl/bio.h
+-
+openssl/lhash.h
+-
+errno.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/lhash.h
+openssl/e_os2.h
+-
+openssl/bio.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/opensslconf.h
+openssl/opensslv.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/opensslv.h
+
+C:/Program Files/OpenSSL-Win64/include/openssl/ossl_typ.h
+limits.h
+-
+openssl/e_os2.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/rand.h
+stdlib.h
+-
+openssl/ossl_typ.h
+-
+openssl/e_os2.h
+-
+openssl/randerr.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/randerr.h
+openssl/symhacks.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/safestack.h
+openssl/stack.h
+-
+openssl/e_os2.h
+-
+
+C:/Program Files/OpenSSL-Win64/include/openssl/stack.h
+
+C:/Program Files/OpenSSL-Win64/include/openssl/symhacks.h
+openssl/e_os2.h
+-
+
+C:/Users/picci/OneDrive/Desktop/crypto_openSSL/prime/main.c
+stdio.h
+-
+openssl/applink.c
+-
+openssl/bn.h
+-
+openssl/rand.h
+-
+openssl/err.h
+-
+
